@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: black;
+    color: white;
+}
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("header-image.png");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding: 10px 8%;
+}
+/* -------------------Navbar --------------*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+}
+.logo img{
+    width: 170px;
+    height: 80px;
+}
+.nav-buton{
+   cursor: pointer;
+}
+.nav-buton button{
+    background: red;
+    color: white;
+    border: 0;
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+/* -----------------  Header Section -----------*/
+.header-content{
+    max-width: 650px;
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    margin-top: 100px;
+    text-align: center;
+}
+.header-content h1{
+    font-size: 60px;
+}
+.header-content h3{
+    font-size: 30px;
+    margin: 20px 0;
+}
+.signup{
+    padding: 10px 5px;
+    width: 650px;
+    display: flex;
+    margin: auto;
+    padding-top: 20px;
+}
+.signup input{
+    padding: 15px 8px;
+    width: 100%;
+    background: #101010;
+    color: white;
+    font-size: 15px;
+    border-radius: 0.5px solid white;
+    border: 0.5px solid white;
+}
+.signup button{
+    margin-left: 12px;
+    width: 200px;
+    background: red;
+    border: 0;
+    color: white;
+    font-size: 15px;
+    border-radius: 1px;
+}
+
+/* --------------Featurers Section --------------------*/
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.txt{
+    max-width: 500px;
+    padding: 200px 70px;
+}
+.f-img image{
+    width: 300px;
+    height: 300px;
+}
+
+/* -----------------------FAQS ---------------------*/
+.faq h1{
+    text-align: center;
+    margin: 80px 0;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.faq{
+   margin: auto;
+      max-width: 800px;
+}
+.faq label{
+    display: block;
+    padding: 30px;
+    background: #303030;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.faq-content{
+    background: #303030;
+   max-height: 0;
+   overflow: hidden;
+   padding: 0px 15px;
+   margin-top: 1px;
+    transition: 1.5s
+
+}
+.faq input:checked+label+ .faq-content{
+    max-height: 600px;
+    padding: 60px ;
+     font-size: 15px;
+}
+.faq .signup{
+    width: 700px;
+    margin-top: 30px;
+}
+.faq p{
+   margin-top: 60px;
+   text-align: center;
+}
+
+/* ---------------------Footer Section --------------*/
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 60px 60px;
+}
+.footer p{
+    padding: 10px 0;
+}
+.footer a{
+    color: #303030;
+}
+
+/* -------- For Mobile  -------- */
+@media (max-width:768px){
+
+nav{flex-direction:column;align-items:center;
+}
+.header-content h1{font-size:35px;
+}
+.header-content h3{font-size:18px;
+}
+.signup{width:100%;flex-direction:column;
+}
+.signup button{width:100%;margin:10px 0;
+}
+.row{flex-direction:column;text-align:center;
+}
+.txt{padding:40px 20px;
+}
+.logo img{width:120px;height:auto;
+}
+.footer{flex-direction:column;text-align:center;
+}
+.faq .signup{width:100%;
+}
+}
